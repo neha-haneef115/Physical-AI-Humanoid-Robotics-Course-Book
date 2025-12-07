@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import useTextSelection from "./useTextSelection";
-
+import { TbMessageChatbot } from "react-icons/tb";
 // Simple Gemini backend URL (see rag-backend/simple_gemini_chat.py)
 // Hard-coded to avoid env misconfiguration while debugging.
 const BACKEND_URL = "http://127.0.0.1:9000";
@@ -16,6 +16,7 @@ const containerStyle: React.CSSProperties = {
   right: "16px",
   width: "320px",
   maxWidth: "100%",
+  height: "360px", // fixed height for the chat panel
   backgroundColor: "#111827", // dark background
   border: "1px solid #374151",
   borderRadius: "12px",
@@ -36,7 +37,7 @@ const headerStyle: React.CSSProperties = {
 
 const messagesStyle: React.CSSProperties = {
   flex: 1,
-  overflowY: "auto",
+  overflowY: "auto", // vertical scrollbar when content grows
   padding: "8px 12px",
   fontSize: "0.875rem",
   color: "#e5e7eb",
@@ -155,7 +156,7 @@ const RAGChatWidget: React.FC = () => {
         onClick={() => setIsOpen(true)}
         aria-label="Open Physical AI chatbot"
       >
-        ?
+  <TbMessageChatbot />
       </button>
 
       {/* Chat container */}
