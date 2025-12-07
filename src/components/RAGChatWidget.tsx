@@ -1,9 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import useTextSelection from "./useTextSelection";
 import { TbMessageChatbot } from "react-icons/tb";
-// Simple Gemini backend URL (see rag-backend/simple_gemini_chat.py)
-// Hard-coded to avoid env misconfiguration while debugging.
-const BACKEND_URL = "http://127.0.0.1:9000";
+// Gemini backend URL (see rag-backend/simple_gemini_chat.py)
+// Uses env var in production, falls back to localhost for local dev.
+const BACKEND_URL =
+  (typeof process !== "undefined" &&
+    process.env.DOCS_RAG_BACKEND_URL) ||
+  "http://127.0.0.1:9000";
 
 type Message = {
   role: "user" | "assistant";
@@ -171,7 +174,7 @@ const RAGChatWidget: React.FC = () => {
                   color: "#f9fafb",
                 }}
               >
-                Physical AI Assistant
+                AI Assistant
               </div>
               {selectedText && (
                 <div

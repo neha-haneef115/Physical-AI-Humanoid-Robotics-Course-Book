@@ -7,10 +7,14 @@ import os
 
 app = FastAPI(title="Simple Gemini Chatbot (google.generativeai)")
 
-origins = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
+origins_env = os.environ.get("BACKEND_CORS_ORIGINS")
+if origins_env:
+    origins = [o.strip() for o in origins_env.split(",") if o.strip()]
+else:
+    origins = [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ]
 
 app.add_middleware(
     CORSMiddleware,
