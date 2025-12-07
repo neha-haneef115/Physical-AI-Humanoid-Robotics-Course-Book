@@ -16,7 +16,7 @@ class Settings(BaseSettings):
         "OPENAI_EMBEDDING_MODEL", "text-embedding-3-large"
     )
     # Gemini configuration (for using Gemini instead of OpenAI)
-    gemini_api_key: str = os.getenv("GEMINI_API_KEY", "AIzaSyA0aRbYMBrRQ0e-Z18RHm6P6n3PNSpaL6o")
+    gemini_api_key: str = os.getenv("GEMINI_API_KEY")
     gemini_model_name: str = os.getenv("GEMINI_MODEL_NAME", "gemini-2.5-flash")
     gemini_embedding_model: str = os.getenv(
         "GEMINI_EMBEDDING_MODEL", "text-embedding-004"
