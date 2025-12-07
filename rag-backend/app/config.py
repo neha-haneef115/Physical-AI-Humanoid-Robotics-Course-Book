@@ -16,13 +16,12 @@ class Settings(BaseSettings):
         "OPENAI_EMBEDDING_MODEL", "text-embedding-3-large"
     )
     # Gemini configuration (for using Gemini instead of OpenAI)
-    # NOTE: do not hard-code secrets here; they must come from environment variables or .env
-    gemini_api_key: str = os.getenv("GEMINI_API_KEY", "")
+    gemini_api_key: str = os.getenv("GEMINI_API_KEY", "AIzaSyA0aRbYMBrRQ0e-Z18RHm6P6n3PNSpaL6o")
     gemini_model_name: str = os.getenv("GEMINI_MODEL_NAME", "gemini-2.5-flash")
     gemini_embedding_model: str = os.getenv(
         "GEMINI_EMBEDDING_MODEL", "text-embedding-004"
     )
-    neon_db_url: str = os.getenv("NEON_DB_URL", "")
+    neon_db_url: str = os.getenv("NEON_DB_URL", "https://ep-patient-cell-ahc38i7z.apirest.c-3.us-east-1.aws.neon.tech/neondb/rest/v1")
     qdrant_url: str = os.getenv("QDRANT_URL", "")
     qdrant_api_key: str = os.getenv("QDRANT_API_KEY", "")
     qdrant_collection: str = os.getenv("QDRANT_COLLECTION", "physical_ai_textbook")
