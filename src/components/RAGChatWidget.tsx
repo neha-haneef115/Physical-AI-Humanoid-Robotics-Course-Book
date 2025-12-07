@@ -1,9 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import useTextSelection from "./useTextSelection";
 import { TbMessageChatbot } from "react-icons/tb";
-// Simple Gemini backend URL (see rag-backend/simple_gemini_chat.py)
-// Hard-coded to avoid env misconfiguration while debugging.
-const BACKEND_URL = "http://127.0.0.1:9000";
+
+// Backend URL for the chatbot API.
+// In production (e.g. Vercel), set DOCS_RAG_BACKEND_URL in the environment
+// to something like https://your-backend-domain.com .
+// Locally, we fall back to the simple Gemini backend on port 9000.
+const BACKEND_URL =
+  (typeof process !== "undefined" && process.env.DOCS_RAG_BACKEND_URL) ||
+  "http://127.0.0.1:9000";
 
 type Message = {
   role: "user" | "assistant";
