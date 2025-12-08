@@ -1,312 +1,364 @@
-import React, { useEffect, useRef, useState } from "react";
-import useTextSelection from "./useTextSelection";
-import { TbMessageChatbot } from "react-icons/tb";
-// Gemini backend URL (see rag-backend/simple_gemini_chat.py)
-// Uses env var in production, falls back to localhost for local dev.
-const BACKEND_URL =
-  (typeof process !== "undefined" &&
-    process.env.DOCS_RAG_BACKEND_URL) ||
-  "http://127.0.0.1:9000";
+// src/components/RAGChatWidget.tsx
+import React, { useState, useEffect, useRef } from 'react';
+import useTextSelection from './useTextSelection';
+import { TbMessageChatbot, TbX, TbSend, TbRobot, TbUser } from 'react-icons/tb';
 
-type Message = {
-  role: "user" | "assistant";
+interface Message {
+  role: 'user' | 'assistant';
   content: string;
-};
+  timestamp: Date;
+}
 
-const containerStyle: React.CSSProperties = {
-  position: "fixed",
-  bottom: "80px",
-  right: "16px",
-  width: "320px",
-  maxWidth: "100%",
-  height: "360px", // fixed height for the chat panel
-  backgroundColor: "#111827", // dark background
-  border: "1px solid #374151",
-  borderRadius: "12px",
-  boxShadow: "0 10px 25px rgba(0,0,0,0.4)",
-  display: "flex",
-  flexDirection: "column",
-  zIndex: 9999,
-};
+interface RAGChatWidgetProps {
+  onClose?: () => void;
+  apiUrl?: string;
+  theme?: 'light' | 'dark';
+}
 
-const headerStyle: React.CSSProperties = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  padding: "8px 12px",
-  borderBottom: "1px solid #374151",
-  backgroundColor: "#111827",
-};
+const RAGChatWidget: React.FC<RAGChatWidgetProps> = ({ 
+  onClose: propOnClose, 
+  apiUrl = 'http://localhost:5000', 
+  theme = 'dark' 
+}) => {
+  const [isOpen, setIsOpen] = useState(true);
+  
+  // Use the provided onClose if available, otherwise use local state
+  const handleClose = () => {
+    if (propOnClose) {
+      propOnClose();
+    } else {
+      setIsOpen(false);
+    }
+  };
 
-const messagesStyle: React.CSSProperties = {
-  flex: 1,
-  overflowY: "auto", // vertical scrollbar when content grows
-  padding: "8px 12px",
-  fontSize: "0.875rem",
-  color: "#e5e7eb",
-};
-
-const inputBarStyle: React.CSSProperties = {
-  borderTop: "1px solid #374151",
-  padding: "8px 8px",
-};
-
-const floatingButtonStyle: React.CSSProperties = {
-  position: "fixed",
-  bottom: "16px",
-  right: "16px",
-  width: "56px",
-  height: "56px",
-  borderRadius: "9999px",
-  backgroundColor: "#2563eb",
-  color: "#ffffff",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  boxShadow: "0 10px 25px rgba(0,0,0,0.25)",
-  border: "none",
-  cursor: "pointer",
-  zIndex: 9999,
-  fontSize: "24px",
-  lineHeight: 1,
-};
-
-const RAGChatWidget: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const { selectedText, clearSelection } = useTextSelection();
 
-  const { selectedText, hasSelection, clearSelection } = useTextSelection();
-
+  // Auto-scroll to bottom when messages change
   useEffect(() => {
-    if (hasSelection && !isOpen) {
-      setIsOpen(true);
-    }
-  }, [hasSelection, isOpen]);
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
 
-  useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [messages, isLoading]);
+  // Handle sending a message
+  const handleSendMessage = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim() || isLoading) return;
 
-  const handleSend = async () => {
-    if (!input.trim()) return;
+    const userMessage: Message = {
+      role: 'user',
+      content: input,
+      timestamp: new Date(),
+    };
 
-    const question = input.trim();
-    const assistantIndex = messages.length + 1;
-
-    setMessages((prev) => [
-      ...prev,
-      { role: "user", content: question },
-      { role: "assistant", content: "" },
-    ]);
-
-    setInput("");
+    // Update UI with user message immediately
+    // Add user message to chat
+    setMessages((prev) => [...prev, userMessage]);
+    setInput('');
     setIsLoading(true);
-    setErrorMessage(null);
 
     try {
-      const response = await fetch(`${BACKEND_URL}/chat`, {
-        method: "POST",
+      // Call the RAG backend API
+      const response = await fetch(`${apiUrl}/chat`, {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
-        body: JSON.stringify({ message: question }),
+        body: JSON.stringify({ message: input }),
+        credentials: 'include', // Include cookies for session management
       });
 
       if (!response.ok) {
-        throw new Error(`HTTP error ${response.status}`);
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.detail || 'Failed to get response from the server');
       }
 
-      const data = (await response.json()) as { reply?: string };
-      const reply = data.reply ?? "";
+      const data = await response.json();
 
-      setMessages((prev) => {
-        const updated = [...prev];
-        const current = updated[assistantIndex];
-        updated[assistantIndex] = {
-          ...current,
-          content: reply,
-        };
-        return updated;
-      });
+      const botMessage: Message = {
+        role: 'assistant',
+        content: data.reply,
+        timestamp: new Date(),
+      };
 
-      clearSelection();
-    } catch (err) {
-      // eslint-disable-next-line no-console
-      console.error("Chat error", err);
-      setErrorMessage("Error contacting Gemini backend");
+      setMessages((prev) => [...prev, botMessage]);
+    } catch (error) {
+      console.error('Error sending message:', error);
+      
+      // More detailed error message
+      let errorMessage = 'Sorry, I encountered an error. Please try again later.';
+      if (error instanceof Error) {
+        errorMessage = error.message || errorMessage;
+      }
+      
+      const errorResponse: Message = {
+        role: 'assistant',
+        content: `Error: ${errorMessage}`,
+        timestamp: new Date(),
+      };
+      setMessages((prev) => [...prev, errorResponse]);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleClose = () => {
-    setIsOpen(false);
-    setErrorMessage(null);
-  };
+  // Handle selected text
+  useEffect(() => {
+    if (selectedText) {
+      setInput(selectedText);
+      clearSelection();
+    }
+  }, [selectedText, clearSelection]);
+
+  // If closed and no onClose handler was provided, show just the floating button
+  if (!isOpen && !propOnClose) {
+    return (
+      <button
+        onClick={() => setIsOpen(true)}
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '20px',
+          width: '56px',
+          height: '56px',
+          borderRadius: '50%',
+          backgroundColor: theme === 'dark' ? '#3b82f6' : '#2563eb',
+          color: 'white',
+          border: 'none',
+          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 999,
+        }}
+        aria-label="Open chat"
+      >
+        <TbMessageChatbot size={24} />
+      </button>
+    );
+  }
 
   return (
-    <>
-      {/* Sticky bottom-right circular button */}
-      <button
-        type="button"
-        style={floatingButtonStyle}
-        onClick={() => setIsOpen(true)}
-        aria-label="Open Physical AI chatbot"
+    <div
+      className={`rag-chat-widget ${theme}`}
+      style={{
+        position: 'fixed',
+        bottom: '20px',
+        right: '20px',
+        width: '320px',
+        maxWidth: 'calc(100% - 40px)',
+        height: '500px',
+        maxHeight: 'calc(100vh - 40px)',
+        backgroundColor: theme === 'dark' ? '#1f2937' : 'white',
+        borderRadius: '12px',
+        boxShadow: '0 10px 25px rgba(0,0,0,0.2)',
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden',
+        zIndex: 1000,
+      }}
+    >
+      {/* Header */}
+      <div
+        style={{
+          padding: '12px 16px',
+          backgroundColor: theme === 'dark' ? '#111827' : '#3b82f6',
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
       >
-  <TbMessageChatbot />
-      </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <TbRobot size={20} />
+          <span style={{ fontWeight: 600 }}>RAG Assistant</span>
+        </div>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            handleClose();
+          }}
+          style={{
+            background: 'none',
+            border: 'none',
+            color: 'white',
+            cursor: 'pointer',
+            padding: '4px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+          aria-label="Close chat"
+          type="button"
+        >
+          <TbX size={20} />
+        </button>
+      </div>
 
-      {/* Chat container */}
-      {isOpen && (
-        <div style={containerStyle}>
-          <div style={headerStyle}>
-            <div>
-              <div
-                style={{
-                  fontWeight: 600,
-                  fontSize: "0.875rem",
-                  color: "#f9fafb",
-                }}
-              >
-                AI Assistant
-              </div>
-              {selectedText && (
-                <div
-                  style={{
-                    fontSize: "0.75rem",
-                    color: "#9ca3af",
-                    marginTop: 4,
-                  }}
-                >
-                  Using selected text as context
-                </div>
-              )}
-            </div>
-            <button
-              type="button"
-              onClick={handleClose}
-              style={{
-                border: "none",
-                background: "transparent",
-                cursor: "pointer",
-                color: "#6b7280",
-                fontSize: "16px",
-              }}
-              aria-label="Close chatbot"
-            >
-              ×
-            </button>
+      {/* Messages */}
+      <div
+        style={{
+          flex: 1,
+          overflowY: 'auto',
+          padding: '16px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '16px',
+        }}
+      >
+        {messages.length === 0 ? (
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: '100%',
+              color: theme === 'dark' ? '#9ca3af' : '#6b7280',
+              textAlign: 'center',
+              padding: '16px',
+            }}
+          >
+            <TbMessageChatbot size={48} style={{ marginBottom: '16px' }} />
+            <h3 style={{ margin: 0, marginBottom: '8px', fontSize: '1.1rem' }}>
+              How can I help you today?
+            </h3>
+            <p style={{ margin: 0, fontSize: '0.875rem' }}>
+              Ask me anything about the textbook content.
+            </p>
           </div>
-
-          <div style={messagesStyle}>
-            {messages.length === 0 && (
-              <p
-                style={{ color: "#9ca3af", fontSize: "0.75rem" }}
-              >
-                Ask a question about the Physical AI & Humanoid Robotics textbook,
-                or select text in the chapter and then ask a question about it.
-              </p>
-            )}
-            {messages.map((m, idx) => (
+        ) : (
+          messages.map((message, index) => (
+            <div
+              key={index}
+              style={{
+                alignSelf: message.role === 'user' ? 'flex-end' : 'flex-start',
+                maxWidth: '85%',
+                backgroundColor:
+                  message.role === 'user'
+                    ? theme === 'dark'
+                      ? '#3b82f6'
+                      : '#3b82f6'
+                    : theme === 'dark'
+                    ? '#374151'
+                    : '#f3f4f6',
+                color: message.role === 'user' ? 'white' : theme === 'dark' ? 'white' : '#111827',
+                padding: '8px 12px',
+                borderRadius: '12px',
+                borderTopLeftRadius: message.role === 'assistant' ? '4px' : '12px',
+                borderTopRightRadius: message.role === 'user' ? '4px' : '12px',
+              }}
+            >
               <div
-                key={idx}
                 style={{
-                  textAlign: m.role === "user" ? "right" : "left",
-                  margin: "4px 0",
-                  whiteSpace: "pre-wrap",
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  marginBottom: '4px',
                 }}
               >
+                {message.role === 'assistant' ? (
+                  <TbRobot size={16} />
+                ) : (
+                  <TbUser size={16} />
+                )}
+                <span style={{ fontWeight: 600, fontSize: '0.75rem', opacity: 0.8 }}>
+                  {message.role === 'assistant' ? 'Assistant' : 'You'}
+                </span>
                 <span
                   style={{
-                    display: "inline-block",
-                    padding: "4px 8px",
-                    borderRadius: 8,
-                    backgroundColor:
-                      m.role === "user" ? "#2563eb" : "#1f2937",
-                    color: m.role === "user" ? "#ffffff" : "#e5e7eb",
+                    fontSize: '0.7rem',
+                    opacity: 0.6,
+                    marginLeft: 'auto',
                   }}
                 >
-                  {m.content}
+                  {message.timestamp.toLocaleTimeString([], {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  })}
                 </span>
               </div>
-            ))}
-            {isLoading && (
-              <div
-                style={{
-                  fontSize: "0.75rem",
-                  color: "#9ca3af",
-                  marginTop: 4,
-                }}
-              >
-                Thinking...
+              <div style={{ whiteSpace: 'pre-wrap', fontSize: '0.9rem' }}>
+                {message.content}
               </div>
-            )}
-            {errorMessage && (
-              <div
-                style={{
-                  fontSize: "0.75rem",
-                  color: "#f87171",
-                  marginTop: 4,
-                }}
-              >
-                {errorMessage}
-              </div>
-            )}
-            <div ref={messagesEndRef} />
-          </div>
+            </div>
+          ))
+        )}
+        <div ref={messagesEndRef} />
+      </div>
 
-          <div style={inputBarStyle}>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                handleSend();
-              }}
-              style={{ display: "flex", gap: 4, alignItems: "center" }}
-            >
-              <textarea
-                rows={1}
+      {/* Input area */}
+      <form
+        onSubmit={handleSendMessage}
+        style={{
+          borderTop: `1px solid ${theme === 'dark' ? '#374151' : '#e5e7eb'}`,
+          padding: '12px',
+        }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            gap: '8px',
+            backgroundColor: theme === 'dark' ? '#374151' : '#f3f4f6',
+            borderRadius: '8px',
+            padding: '8px',
+          }}
+        >
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Type your question..."
+            style={{
+              flex: 1,
+              border: 'none',
+              background: 'transparent',
+              color: theme === 'dark' ? 'white' : '#111827',
+              padding: '8px',
+              outline: 'none',
+              fontSize: '0.9rem',
+            }}
+            disabled={isLoading}
+          />
+          <button
+            type="submit"
+            disabled={isLoading || !input.trim()}
+            style={{
+              background: 'transparent',
+              border: 'none',
+              color: theme === 'dark' ? '#9ca3af' : '#6b7280',
+              padding: '8px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              opacity: isLoading || !input.trim() ? 0.5 : 1,
+              cursor: isLoading || !input.trim() ? 'not-allowed' : 'pointer',
+            }}
+            aria-label="Send message"
+          >
+            {isLoading ? (
+              <div
                 style={{
-                  flex: 1,
-                  borderRadius: 6,
-                  border: "1px solid #4b5563",
-                  backgroundColor: "#111827",
-                  color: "#e5e7eb",
-                  padding: "4px 6px",
-                  fontSize: "0.875rem",
-                  resize: "none",
+                  width: '20px',
+                  height: '20px',
+                  border: '2px solid #9ca3af',
+                  borderTopColor: 'transparent',
+                  borderRadius: '50%',
+                  animation: 'spin 1s linear infinite',
                 }}
-                placeholder="Ask a question..."
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
               />
-              <button
-                type="submit"
-                disabled={!input.trim() || isLoading}
-                style={{
-                  borderRadius: 6,
-                  border: "none",
-                  padding: "4px 10px",
-                  fontSize: "0.875rem",
-                  backgroundColor: "#2563eb",
-                  color: "#ffffff",
-                  cursor:
-                    !input.trim() || isLoading ? "not-allowed" : "pointer",
-                  opacity: !input.trim() || isLoading ? 0.6 : 1,
-                }}
-              >
-                Send
-              </button>
-            </form>
-          </div>
+            ) : (
+              <TbSend size={20} />
+            )}
+          </button>
         </div>
-      )}
-    </>
+      </form>
+    </div>
   );
 };
 
