@@ -5,7 +5,7 @@ export default function Root({children}) {
   return (
     <>
       {children}
-      <ChatBot apiUrl="http://localhost:8014" />
+      <ChatBot apiUrl="http://localhost:8015" />
     </>
   );
 }
