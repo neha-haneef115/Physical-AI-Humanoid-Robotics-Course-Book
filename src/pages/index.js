@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -65,3 +66,6 @@ export default function Home() {
     </Layout>
   );
 }
+=======
+import React from "react";import Layout from "@theme/Layout";import Link from "@docusaurus/Link";export default function Home() {return (<Layout title="Physical AI & Humanoid Robotics" description="Comprehensive guide to building intelligent humanoid robots"><div style={{padding: "2rem",textAlign: "center"}}><h1>Physical AI & Humanoid Robotics</h1><p>Comprehensive guide to building intelligent humanoid robots using ROS 2, simulation platforms, and AI technologies</p><div style={{display: "flex",gap: "1rem",justifyContent: "center",marginTop: "2rem"}}><Link to="/docs/intro" className="button button--primary button--lg">Start Course</Link><Link to="/docs/learning-paths/learning-paths" className="button button--secondary button--lg">Learning Paths</Link></div></div></Layout>);}
+>>>>>>> 1e24a19805a301e89fd2a6447eb0e6310b793764

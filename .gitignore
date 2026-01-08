@@ -1,4 +1,5 @@
 node_modules
+<<<<<<< HEAD
 
 # Environment variables
 .env.local
@@ -60,3 +61,5 @@ jspm_packages/
 .Trashes
 ehthumbs.db
 Thumbs.db
+=======
+>>>>>>> 1e24a19805a301e89fd2a6447eb0e6310b793764

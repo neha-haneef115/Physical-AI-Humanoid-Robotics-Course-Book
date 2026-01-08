@@ -67,7 +67,11 @@ export default {
     },
     "footer": {
       "style": "dark",
+<<<<<<< HEAD
       "copyright": "Copyright 2026 Physical AI & Humanoid Robotics. Built with Docusaurus.",
+=======
+      "copyright": "Copyright 2025 Physical AI & Humanoid Robotics. Built with Docusaurus.",
+>>>>>>> 1e24a19805a301e89fd2a6447eb0e6310b793764
       "links": []
     },
     "colorMode": {
@@ -240,12 +244,20 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
+<<<<<<< HEAD
           "sidebarPath": "C:\\Users\\Madina Computers\\OneDrive\\Documents\\Physical-AI-Humanoid-Robotics-Course-Book-main\\sidebars.js",
+=======
+          "sidebarPath": "C:\\Users\\ShabbirSon\\OneDrive\\Desktop\\Book\\sidebars.js",
+>>>>>>> 1e24a19805a301e89fd2a6447eb0e6310b793764
           "editUrl": "https://github.com/neha-haneef115/Physical-AI-Humanoid-Robotics-Course-Book/edit/main/"
         },
         "blog": false,
         "theme": {
+<<<<<<< HEAD
           "customCss": "C:\\Users\\Madina Computers\\OneDrive\\Documents\\Physical-AI-Humanoid-Robotics-Course-Book-main\\src\\css\\custom.css"
+=======
+          "customCss": "C:\\Users\\ShabbirSon\\OneDrive\\Desktop\\Book\\src\\css\\custom.css"
+>>>>>>> 1e24a19805a301e89fd2a6447eb0e6310b793764
         }
       }
     ]
