@@ -7,7 +7,7 @@ export default {
   "title": "Physical AI & Humanoid Robotics",
   "tagline": "Comprehensive guide to building intelligent humanoid robots",
   "url": "http://localhost:3000",
-  "baseUrl": "/ur/",
+  "baseUrl": "/",
   "favicon": "img/favicon.ico",
   "organizationName": "neha-haneef115",
   "projectName": "Physical-AI-Humanoid-Robotics-Course-Book",

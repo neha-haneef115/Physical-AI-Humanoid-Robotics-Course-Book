@@ -5,7 +5,7 @@
   "source": "@site/docs/part3-perception/chapter-7-slam.md",
   "sourceDirName": "part3-perception",
   "slug": "/part3-perception/chapter-7-slam",
-  "permalink": "/ur/docs/part3-perception/chapter-7-slam",
+  "permalink": "/docs/part3-perception/chapter-7-slam",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/neha-haneef115/Physical-AI-Humanoid-Robotics-Course-Book/edit/main/docs/part3-perception/chapter-7-slam.md",
@@ -19,10 +19,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 6: Robot Vision with RealSense & OpenCV",
-    "permalink": "/ur/docs/part3-perception/chapter-6-vision"
+    "permalink": "/docs/part3-perception/chapter-6-vision"
   },
   "next": {
     "title": "Chapter 8: Vision-Language-Action Models",
-    "permalink": "/ur/docs/part4-ai-integration/chapter-8-vla"
+    "permalink": "/docs/part4-ai-integration/chapter-8-vla"
   }
 }

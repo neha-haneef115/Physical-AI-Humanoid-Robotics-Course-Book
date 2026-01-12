@@ -5,7 +5,7 @@
   "source": "@site/docs/part3-perception/chapter-6-vision.md",
   "sourceDirName": "part3-perception",
   "slug": "/part3-perception/chapter-6-vision",
-  "permalink": "/ur/docs/part3-perception/chapter-6-vision",
+  "permalink": "/docs/part3-perception/chapter-6-vision",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/neha-haneef115/Physical-AI-Humanoid-Robotics-Course-Book/edit/main/docs/part3-perception/chapter-6-vision.md",
@@ -19,10 +19,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 5: NVIDIA Isaac Sim",
-    "permalink": "/ur/docs/part2-simulation/chapter-5-isaac"
+    "permalink": "/docs/part2-simulation/chapter-5-isaac"
   },
   "next": {
     "title": "Chapter 7: Visual SLAM with Isaac ROS",
-    "permalink": "/ur/docs/part3-perception/chapter-7-slam"
+    "permalink": "/docs/part3-perception/chapter-7-slam"
   }
 }

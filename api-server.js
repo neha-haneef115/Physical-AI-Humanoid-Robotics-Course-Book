@@ -3,8 +3,6 @@ const cors = require('cors');
 const fs = require('fs').promises;
 const path = require('path');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
-
-// Load environment variables from .env.local
 require('dotenv').config({ path: '.env.local' });
 
 const app = express();
@@ -132,11 +130,17 @@ async function getAllMarkdownFiles(dir) {
 
 // Generate response using Gemini AI with context from documentation
 async function generateResponse(question, docs, selectedText = null) {
+  console.log('=== generateResponse called ===');
+  console.log('Question:', question);
+  console.log('Docs count:', docs?.length || 0);
+  console.log('Selected text:', selectedText);
+  
   // Try multiple approaches in order
   const approaches = [
     {
       name: 'Gemini API',
       fn: async () => {
+        console.log('--- Trying Gemini API ---');
         const text = await callGeminiWithRetry(prompt);
         console.log('Gemini response received (truncated):', (text || '').slice(0, 120));
         return text;
@@ -145,6 +149,7 @@ async function generateResponse(question, docs, selectedText = null) {
     {
       name: 'OpenAI (if configured)',
       fn: async () => {
+        console.log('--- Trying OpenAI ---');
         // Placeholder for OpenAI integration
         return null;
       }
@@ -152,6 +157,7 @@ async function generateResponse(question, docs, selectedText = null) {
     {
       name: 'Local LLM (if configured)',
       fn: async () => {
+        console.log('--- Trying Local LLM ---');
         // Placeholder for local LLM integration
         return null;
       }
@@ -159,6 +165,7 @@ async function generateResponse(question, docs, selectedText = null) {
     {
       name: 'Simple keyword matching',
       fn: async () => {
+        console.log('--- Trying keyword matching ---');
         const lowerQuestion = question.toLowerCase();
         
         if (lowerQuestion.includes('ros') || lowerQuestion.includes('robot operating system')) {
@@ -236,7 +243,10 @@ async function generateResponse(question, docs, selectedText = null) {
       // Compose prompt
       const prompt = `You are an expert AI tutor specializing in Physical AI and Humanoid Robotics. Answer clearly and concisely.\n\nContext from course materials:${context}\n\nUser Question: ${question}\n${selectedText ? `\nSelected Text: "${selectedText}"\nFocus your answer on the selected text if relevant.` : ''}`;
       
+      console.log('Prompt prepared, calling approach function...');
       const result = await approach.fn();
+      console.log('Approach result:', result ? (typeof result === 'string' ? 'string length ' + result.length : 'object') : 'null/undefined');
+      
       if (result && typeof result === 'string' && result.length > 10) {
         console.log(`✅ ${approach.name} succeeded!`);
         return {
@@ -247,11 +257,13 @@ async function generateResponse(question, docs, selectedText = null) {
       }
     } catch (error) {
       console.warn(`❌ ${approach.name} failed:`, error.message);
+      console.warn('Error stack:', error.stack);
       continue; // Try next approach
     }
   }
   
   // If all approaches fail, return final fallback
+  console.log('=== All approaches failed, returning fallback ===');
   return {
     answer: "I'm having trouble connecting to my AI brain right now. Please try again in a moment. In the meantime, you can explore the course materials or ask me about:\n\n• ROS 2 fundamentals\n• Gazebo simulation\n• NVIDIA Isaac Sim\n• Humanoid robot kinematics\n• Vision-Language-Action models",
     sources: [],
