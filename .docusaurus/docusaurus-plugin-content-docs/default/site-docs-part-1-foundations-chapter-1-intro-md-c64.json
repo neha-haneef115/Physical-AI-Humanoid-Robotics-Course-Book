@@ -5,7 +5,7 @@
   "source": "@site/docs/part1-foundations/chapter-1-intro.md",
   "sourceDirName": "part1-foundations",
   "slug": "/part1-foundations/chapter-1-intro",
-  "permalink": "/docs/part1-foundations/chapter-1-intro",
+  "permalink": "/ur/docs/part1-foundations/chapter-1-intro",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/neha-haneef115/Physical-AI-Humanoid-Robotics-Course-Book/edit/main/docs/part1-foundations/chapter-1-intro.md",
@@ -19,10 +19,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Course Overview",
-    "permalink": "/docs/intro"
+    "permalink": "/ur/docs/intro"
   },
   "next": {
     "title": "Chapter 2: Fundamentals of ROS 2",
-    "permalink": "/docs/part1-foundations/chapter-2-ros2"
+    "permalink": "/ur/docs/part1-foundations/chapter-2-ros2"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/part5-humanoid-dev/chapter-12-capstone.md",
   "sourceDirName": "part5-humanoid-dev",
   "slug": "/part5-humanoid-dev/chapter-12-capstone",
-  "permalink": "/docs/part5-humanoid-dev/chapter-12-capstone",
+  "permalink": "/ur/docs/part5-humanoid-dev/chapter-12-capstone",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/neha-haneef115/Physical-AI-Humanoid-Robotics-Course-Book/edit/main/docs/part5-humanoid-dev/chapter-12-capstone.md",
@@ -19,6 +19,6 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 11: Human-Robot Interaction",
-    "permalink": "/docs/part5-humanoid-dev/chapter-11-hri"
+    "permalink": "/ur/docs/part5-humanoid-dev/chapter-11-hri"
   }
 }

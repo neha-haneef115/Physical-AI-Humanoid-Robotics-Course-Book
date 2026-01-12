@@ -1,194 +1,194 @@
 {
-  "/docs-0ca": {
+  "/ur/docs-12a": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "aba21aa0"
     }
   },
-  "/docs-16f": {
+  "/ur/docs-1f0": {
     "__comp": "a7bd4aaa",
-    "__props": "0058b4c6"
+    "__props": "04f2558c"
   },
-  "/docs-9b9": {
+  "/ur/docs-815": {
     "__comp": "a94703ab"
   },
-  "/docs/assessments/-373": {
+  "/ur/docs/assessments/-552": {
     "__comp": "17896441",
     "content": "10cc8daf"
   },
-  "/docs/assessments/gazebo-robot-project-4a1": {
+  "/ur/docs/assessments/gazebo-robot-project-af8": {
     "__comp": "17896441",
     "content": "9c852670"
   },
-  "/docs/assessments/ros2-basics-quiz-22c": {
+  "/ur/docs/assessments/ros2-basics-quiz-419": {
     "__comp": "17896441",
     "content": "fb078b1a"
   },
-  "/docs/assessments/vla-capstone-97d": {
+  "/ur/docs/assessments/vla-capstone-bd5": {
     "__comp": "17896441",
     "content": "f0aef1fa"
   },
-  "/docs/intro-61d": {
+  "/ur/docs/intro-793": {
     "__comp": "17896441",
     "content": "0e384e19"
   },
-  "/docs/learning-paths/-2fa": {
+  "/ur/docs/learning-paths/-11f": {
     "__comp": "17896441",
     "content": "39189f60"
   },
-  "/docs/learning-paths/complete-physical-ai-bb7": {
+  "/ur/docs/learning-paths/complete-physical-ai-5ec": {
     "__comp": "17896441",
     "content": "f15601c9"
   },
-  "/docs/learning-paths/quick-start-088": {
+  "/ur/docs/learning-paths/quick-start-17a": {
     "__comp": "17896441",
     "content": "85972696"
   },
-  "/docs/learning-paths/robotics-foundations-60c": {
+  "/ur/docs/learning-paths/robotics-foundations-751": {
     "__comp": "17896441",
     "content": "66e8f9c7"
   },
-  "/docs/learning-paths/simulation-specialist-695": {
+  "/ur/docs/learning-paths/simulation-specialist-e80": {
     "__comp": "17896441",
     "content": "4ffded52"
   },
-  "/docs/learning-paths/software-developer-112": {
+  "/ur/docs/learning-paths/software-developer-ce4": {
     "__comp": "17896441",
     "content": "38c57875"
   },
-  "/docs/module-1/-8e0": {
+  "/ur/docs/module-1/-9b5": {
     "__comp": "17896441",
     "content": "51279860"
   },
-  "/docs/module-1/ch1-1-8a2": {
+  "/ur/docs/module-1/ch1-1-497": {
     "__comp": "17896441",
     "content": "a340f159"
   },
-  "/docs/module-1/ch1-2-8c6": {
+  "/ur/docs/module-1/ch1-2-f9a": {
     "__comp": "17896441",
     "content": "d651e770"
   },
-  "/docs/module-1/ch1-3-906": {
+  "/ur/docs/module-1/ch1-3-954": {
     "__comp": "17896441",
     "content": "ae90331f"
   },
-  "/docs/module-1/ch1-4-641": {
+  "/ur/docs/module-1/ch1-4-728": {
     "__comp": "17896441",
     "content": "430926d7"
   },
-  "/docs/module-2/-e75": {
+  "/ur/docs/module-2/-069": {
     "__comp": "17896441",
     "content": "5ad232c4"
   },
-  "/docs/module-2/ch2-1-5af": {
+  "/ur/docs/module-2/ch2-1-3de": {
     "__comp": "17896441",
     "content": "8c1883f1"
   },
-  "/docs/module-2/ch2-2-2da": {
+  "/ur/docs/module-2/ch2-2-c45": {
     "__comp": "17896441",
     "content": "b2025911"
   },
-  "/docs/module-2/ch2-3-73b": {
+  "/ur/docs/module-2/ch2-3-7a3": {
     "__comp": "17896441",
     "content": "eef0a0c6"
   },
-  "/docs/module-2/ch2-4-1d0": {
+  "/ur/docs/module-2/ch2-4-8d5": {
     "__comp": "17896441",
     "content": "2c5af468"
   },
-  "/docs/module-3/-127": {
+  "/ur/docs/module-3/-17b": {
     "__comp": "17896441",
     "content": "9b44c66f"
   },
-  "/docs/module-3/ch3-1-81e": {
+  "/ur/docs/module-3/ch3-1-c2b": {
     "__comp": "17896441",
     "content": "87945aa2"
   },
-  "/docs/module-3/ch3-2-450": {
+  "/ur/docs/module-3/ch3-2-64a": {
     "__comp": "17896441",
     "content": "68d640e5"
   },
-  "/docs/module-3/ch3-3-6cc": {
+  "/ur/docs/module-3/ch3-3-b73": {
     "__comp": "17896441",
     "content": "e86559d3"
   },
-  "/docs/module-3/ch3-4-858": {
+  "/ur/docs/module-3/ch3-4-685": {
     "__comp": "17896441",
     "content": "585537b5"
   },
-  "/docs/module-4/-710": {
+  "/ur/docs/module-4/-b2c": {
     "__comp": "17896441",
     "content": "c7dfbc38"
   },
-  "/docs/module-4/ch4-1-e70": {
+  "/ur/docs/module-4/ch4-1-155": {
     "__comp": "17896441",
     "content": "d24b117a"
   },
-  "/docs/module-4/ch4-2-6bf": {
+  "/ur/docs/module-4/ch4-2-557": {
     "__comp": "17896441",
     "content": "a422ded9"
   },
-  "/docs/module-4/ch4-3-bc4": {
+  "/ur/docs/module-4/ch4-3-3b9": {
     "__comp": "17896441",
     "content": "9c82049b"
   },
-  "/docs/module-4/ch4-4-f1d": {
+  "/ur/docs/module-4/ch4-4-4c9": {
     "__comp": "17896441",
     "content": "1abd13c5"
   },
-  "/docs/part1-foundations/chapter-1-intro-955": {
+  "/ur/docs/part1-foundations/chapter-1-intro-52e": {
     "__comp": "17896441",
     "content": "c6430192"
   },
-  "/docs/part1-foundations/chapter-2-ros2-b47": {
+  "/ur/docs/part1-foundations/chapter-2-ros2-3c4": {
     "__comp": "17896441",
     "content": "000f90e4"
   },
-  "/docs/part2-simulation/chapter-3-urdf-828": {
+  "/ur/docs/part2-simulation/chapter-3-urdf-399": {
     "__comp": "17896441",
     "content": "3f74066e"
   },
-  "/docs/part2-simulation/chapter-4-gazebo-644": {
+  "/ur/docs/part2-simulation/chapter-4-gazebo-8c7": {
     "__comp": "17896441",
     "content": "cc6eb4cc"
   },
-  "/docs/part2-simulation/chapter-5-isaac-dd2": {
+  "/ur/docs/part2-simulation/chapter-5-isaac-fa6": {
     "__comp": "17896441",
     "content": "85f6ecd7"
   },
-  "/docs/part3-perception/chapter-6-vision-4e7": {
+  "/ur/docs/part3-perception/chapter-6-vision-771": {
     "__comp": "17896441",
     "content": "b727042c"
   },
-  "/docs/part3-perception/chapter-7-slam-103": {
+  "/ur/docs/part3-perception/chapter-7-slam-157": {
     "__comp": "17896441",
     "content": "254db351"
   },
-  "/docs/part4-ai-integration/chapter-8-vla-97b": {
+  "/ur/docs/part4-ai-integration/chapter-8-vla-cc2": {
     "__comp": "17896441",
     "content": "a4e72795"
   },
-  "/docs/part4-ai-integration/chapter-9-rl-56a": {
+  "/ur/docs/part4-ai-integration/chapter-9-rl-8d6": {
     "__comp": "17896441",
     "content": "39f10840"
   },
-  "/docs/part5-humanoid-dev/chapter-10-kinematics-f17": {
+  "/ur/docs/part5-humanoid-dev/chapter-10-kinematics-c91": {
     "__comp": "17896441",
     "content": "23a24f36"
   },
-  "/docs/part5-humanoid-dev/chapter-11-hri-ecc": {
+  "/ur/docs/part5-humanoid-dev/chapter-11-hri-ea9": {
     "__comp": "17896441",
     "content": "1b0bc877"
   },
-  "/docs/part5-humanoid-dev/chapter-12-capstone-08d": {
+  "/ur/docs/part5-humanoid-dev/chapter-12-capstone-330": {
     "__comp": "17896441",
     "content": "19fa37d1"
   },
-  "/docs/toc-6af": {
+  "/ur/docs/toc-534": {
     "__comp": "17896441",
     "content": "cfc7de0c"
   },
-  "/-2e1": {
+  "/ur/-3b1": {
     "__comp": "c4f5d8e4",
     "__context": {
       "plugin": "a7456010"

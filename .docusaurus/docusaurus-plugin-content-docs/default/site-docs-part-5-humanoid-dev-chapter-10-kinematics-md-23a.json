@@ -5,7 +5,7 @@
   "source": "@site/docs/part5-humanoid-dev/chapter-10-kinematics.md",
   "sourceDirName": "part5-humanoid-dev",
   "slug": "/part5-humanoid-dev/chapter-10-kinematics",
-  "permalink": "/docs/part5-humanoid-dev/chapter-10-kinematics",
+  "permalink": "/ur/docs/part5-humanoid-dev/chapter-10-kinematics",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/neha-haneef115/Physical-AI-Humanoid-Robotics-Course-Book/edit/main/docs/part5-humanoid-dev/chapter-10-kinematics.md",
@@ -19,10 +19,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 9: Reinforcement Learning for Robot Control",
-    "permalink": "/docs/part4-ai-integration/chapter-9-rl"
+    "permalink": "/ur/docs/part4-ai-integration/chapter-9-rl"
   },
   "next": {
     "title": "Chapter 11: Human-Robot Interaction",
-    "permalink": "/docs/part5-humanoid-dev/chapter-11-hri"
+    "permalink": "/ur/docs/part5-humanoid-dev/chapter-11-hri"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/part5-humanoid-dev/chapter-11-hri.md",
   "sourceDirName": "part5-humanoid-dev",
   "slug": "/part5-humanoid-dev/chapter-11-hri",
-  "permalink": "/docs/part5-humanoid-dev/chapter-11-hri",
+  "permalink": "/ur/docs/part5-humanoid-dev/chapter-11-hri",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/neha-haneef115/Physical-AI-Humanoid-Robotics-Course-Book/edit/main/docs/part5-humanoid-dev/chapter-11-hri.md",
@@ -19,10 +19,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 10: Humanoid Kinematics & Dynamics",
-    "permalink": "/docs/part5-humanoid-dev/chapter-10-kinematics"
+    "permalink": "/ur/docs/part5-humanoid-dev/chapter-10-kinematics"
   },
   "next": {
     "title": "Chapter 12: Building an Autonomous Humanoid",
-    "permalink": "/docs/part5-humanoid-dev/chapter-12-capstone"
+    "permalink": "/ur/docs/part5-humanoid-dev/chapter-12-capstone"
   }
 }

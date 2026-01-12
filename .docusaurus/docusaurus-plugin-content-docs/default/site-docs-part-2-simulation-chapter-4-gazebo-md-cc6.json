@@ -5,7 +5,7 @@
   "source": "@site/docs/part2-simulation/chapter-4-gazebo.md",
   "sourceDirName": "part2-simulation",
   "slug": "/part2-simulation/chapter-4-gazebo",
-  "permalink": "/docs/part2-simulation/chapter-4-gazebo",
+  "permalink": "/ur/docs/part2-simulation/chapter-4-gazebo",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/neha-haneef115/Physical-AI-Humanoid-Robotics-Course-Book/edit/main/docs/part2-simulation/chapter-4-gazebo.md",
@@ -19,10 +19,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 3: Robot Modeling with URDF/SDF",
-    "permalink": "/docs/part2-simulation/chapter-3-urdf"
+    "permalink": "/ur/docs/part2-simulation/chapter-3-urdf"
   },
   "next": {
     "title": "Chapter 5: NVIDIA Isaac Sim",
-    "permalink": "/docs/part2-simulation/chapter-5-isaac"
+    "permalink": "/ur/docs/part2-simulation/chapter-5-isaac"
   }
 }
