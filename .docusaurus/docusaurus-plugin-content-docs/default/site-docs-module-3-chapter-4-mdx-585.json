@@ -18,14 +18,5 @@
     "sidebar_position": 4,
     "duration": 10,
     "difficulty": "advanced"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Chapter 3: Computer Vision",
-    "permalink": "/docs/module-3/ch3-3"
-  },
-  "next": {
-    "title": "Module Overview",
-    "permalink": "/docs/module-4/"
   }
 }

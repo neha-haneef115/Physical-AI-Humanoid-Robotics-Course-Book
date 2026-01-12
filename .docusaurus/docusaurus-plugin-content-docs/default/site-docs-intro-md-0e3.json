@@ -1,7 +1,7 @@
 {
   "id": "intro",
-  "title": "Introduction to Physical AI & Humanoid Robotics",
-  "description": "Welcome to this comprehensive guide to building intelligent humanoid robots using cutting-edge technologies including ROS 2, simulation platforms, and AI systems.",
+  "title": "Physical AI & Humanoid Robotics - Complete Course",
+  "description": "Part 1: Foundations of Physical AI",
   "source": "@site/docs/intro.md",
   "sourceDirName": ".",
   "slug": "/intro",
@@ -13,12 +13,12 @@
   "version": "current",
   "sidebarPosition": 1,
   "frontMatter": {
-    "title": "Introduction to Physical AI & Humanoid Robotics",
+    "title": "Physical AI & Humanoid Robotics - Complete Course",
     "sidebar_position": 1
   },
   "sidebar": "tutorialSidebar",
   "next": {
-    "title": "Module Overview",
-    "permalink": "/docs/module-1/"
+    "title": "Chapter 1: Introduction to Physical AI",
+    "permalink": "/docs/part1-foundations/chapter-1-intro"
   }
 }

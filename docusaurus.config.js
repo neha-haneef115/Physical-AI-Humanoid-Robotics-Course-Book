@@ -26,6 +26,11 @@ const config = {
   onBrokenMarkdownLinks: "warn",
 
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
       title: "Physical AI & Humanoid Robotics",
       items: [
@@ -42,7 +47,7 @@ const config = {
         },
         {
           type: 'dropdown',
-          label: '🌐 Language',
+          label: 'Language',
           position: 'right',
           items: [
             {

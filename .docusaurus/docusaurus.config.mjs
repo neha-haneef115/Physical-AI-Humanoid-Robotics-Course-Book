@@ -31,6 +31,11 @@ export default {
   },
   "onBrokenLinks": "warn",
   "themeConfig": {
+    "colorMode": {
+      "defaultMode": "dark",
+      "disableSwitch": false,
+      "respectPrefersColorScheme": false
+    },
     "navbar": {
       "title": "Physical AI & Humanoid Robotics",
       "items": [
@@ -47,7 +52,7 @@ export default {
         },
         {
           "type": "dropdown",
-          "label": "🌐 Language",
+          "label": "Language",
           "position": "right",
           "items": [
             {
@@ -69,11 +74,6 @@ export default {
       "style": "dark",
       "copyright": "Copyright 2026 Physical AI & Humanoid Robotics. Built with Docusaurus.",
       "links": []
-    },
-    "colorMode": {
-      "defaultMode": "light",
-      "disableSwitch": false,
-      "respectPrefersColorScheme": false
     },
     "docs": {
       "versionPersistence": "localStorage",

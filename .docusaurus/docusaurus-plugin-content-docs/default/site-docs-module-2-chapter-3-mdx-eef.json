@@ -18,14 +18,5 @@
     "sidebar_position": 3,
     "duration": 12,
     "difficulty": "intermediate"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Chapter 2: Physics and Sensors",
-    "permalink": "/docs/module-2/ch2-2"
-  },
-  "next": {
-    "title": "Chapter 4: Advanced Simulation",
-    "permalink": "/docs/module-2/ch2-4"
   }
 }

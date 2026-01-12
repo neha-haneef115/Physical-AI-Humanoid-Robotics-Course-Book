@@ -18,14 +18,5 @@
     "sidebar_position": 3,
     "duration": 10,
     "difficulty": "intermediate"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Chapter 2: Nodes and Topics",
-    "permalink": "/docs/module-1/ch1-2"
-  },
-  "next": {
-    "title": "Chapter 4: URDF and Robot Models",
-    "permalink": "/docs/module-1/ch1-4"
   }
 }

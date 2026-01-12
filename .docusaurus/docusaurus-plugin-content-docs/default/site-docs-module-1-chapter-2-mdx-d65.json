@@ -18,14 +18,5 @@
     "sidebar_position": 2,
     "duration": 12,
     "difficulty": "intermediate"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Chapter 1: ROS 2 Architecture",
-    "permalink": "/docs/module-1/ch1-1"
-  },
-  "next": {
-    "title": "Chapter 3: Services and Actions",
-    "permalink": "/docs/module-1/ch1-3"
   }
 }

@@ -1,1 +1,105 @@
-module.exports = {tutorialSidebar: [{type: "doc",id: "intro",label: "Introduction"},{type: "category",label: "Module 1: The Robotic Nervous System (ROS 2)",items: [{type: "doc",id: "module-1/index",label: "Module Overview",key: "module1-overview"},{type: "doc",id: "module-1/ch1-1",label: "Chapter 1: ROS 2 Architecture"},{type: "doc",id: "module-1/ch1-2",label: "Chapter 2: Nodes and Topics"},{type: "doc",id: "module-1/ch1-3",label: "Chapter 3: Services and Actions"},{type: "doc",id: "module-1/ch1-4",label: "Chapter 4: URDF and Robot Models"}]},{type: "category",label: "Module 2: The Digital Twin (Gazebo & Unity)",items: [{type: "doc",id: "module-2/index",label: "Module Overview",key: "module2-overview"},{type: "doc",id: "module-2/ch2-1",label: "Chapter 1: Gazebo Fundamentals"},{type: "doc",id: "module-2/ch2-2",label: "Chapter 2: Physics and Sensors"},{type: "doc",id: "module-2/ch2-3",label: "Chapter 3: Unity Robotics"},{type: "doc",id: "module-2/ch2-4",label: "Chapter 4: Advanced Simulation"}]},{type: "category",label: "Module 3: The AI-Robot Brain (NVIDIA Isaac)",items: [{type: "doc",id: "module-3/index",label: "Module Overview",key: "module3-overview"},{type: "doc",id: "module-3/ch3-1",label: "Chapter 1: Isaac Sim Introduction"},{type: "doc",id: "module-3/ch3-2",label: "Chapter 2: AI Integration"},{type: "doc",id: "module-3/ch3-3",label: "Chapter 3: Computer Vision"},{type: "doc",id: "module-3/ch3-4",label: "Chapter 4: Machine Learning"}]},{type: "category",label: "Module 4: Vision-Language-Action (VLA)",items: [{type: "doc",id: "module-4/index",label: "Module Overview",key: "module4-overview"},{type: "doc",id: "module-4/ch4-1",label: "Chapter 1: VLA Fundamentals"},{type: "doc",id: "module-4/ch4-2",label: "Chapter 2: Language Models"},{type: "doc",id: "module-4/ch4-3",label: "Chapter 3: Vision Systems"},{type: "doc",id: "module-4/ch4-4",label: "Chapter 4: Action Planning"}]}]};
+module.exports = {
+  tutorialSidebar: [
+    {
+      type: "doc",
+      id: "intro",
+      label: "Course Overview"
+    },
+    {
+      type: "category",
+      label: "Part 1: Foundations of Physical AI",
+      items: [
+        {
+          type: "doc",
+          id: "part1-foundations/chapter-1-intro",
+          label: "Chapter 1: Introduction to Physical AI"
+        },
+        {
+          type: "doc",
+          id: "part1-foundations/chapter-2-ros2",
+          label: "Chapter 2: Fundamentals of ROS 2"
+        }
+      ]
+    },
+    {
+      type: "category",
+      label: "Part 2: Simulation & Digital Twins",
+      items: [
+        {
+          type: "doc",
+          id: "part2-simulation/chapter-3-urdf",
+          label: "Chapter 3: Robot Modeling with URDF/SDF"
+        },
+        {
+          type: "doc",
+          id: "part2-simulation/chapter-4-gazebo",
+          label: "Chapter 4: Physics Simulation with Gazebo"
+        },
+        {
+          type: "doc",
+          id: "part2-simulation/chapter-5-isaac",
+          label: "Chapter 5: NVIDIA Isaac Sim"
+        }
+      ]
+    },
+    {
+      type: "category",
+      label: "Part 3: Perception & Navigation",
+      items: [
+        {
+          type: "doc",
+          id: "part3-perception/chapter-6-vision",
+          label: "Chapter 6: Robot Vision with RealSense & OpenCV"
+        },
+        {
+          type: "doc",
+          id: "part3-perception/chapter-7-slam",
+          label: "Chapter 7: Visual SLAM with Isaac ROS"
+        }
+      ]
+    },
+    {
+      type: "category",
+      label: "Part 4: AI & Robotics Integration",
+      items: [
+        {
+          type: "doc",
+          id: "part4-ai-integration/chapter-8-vla",
+          label: "Chapter 8: Vision-Language-Action Models"
+        },
+        {
+          type: "doc",
+          id: "part4-ai-integration/chapter-9-rl",
+          label: "Chapter 9: Reinforcement Learning for Robot Control"
+        }
+      ]
+    },
+    {
+      type: "category",
+      label: "Part 5: Humanoid Robot Development",
+      items: [
+        {
+          type: "doc",
+          id: "part5-humanoid-dev/chapter-10-kinematics",
+          label: "Chapter 10: Humanoid Kinematics & Dynamics"
+        },
+        {
+          type: "doc",
+          id: "part5-humanoid-dev/chapter-11-hri",
+          label: "Chapter 11: Human-Robot Interaction"
+        }
+      ]
+    },
+    {
+      type: "category",
+      label: "Part 6: Capstone Project",
+      items: [
+        {
+          type: "doc",
+          id: "part5-humanoid-dev/chapter-12-capstone",
+          label: "Chapter 12: Building an Autonomous Humanoid"
+        }
+      ]
+    }
+  ]
+};

@@ -42,17 +42,17 @@
       "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/docs-bad": {
+  "/docs-0ca": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docsaba-d7c"
     }
   },
-  "/docs-2e5": {
+  "/docs-16f": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---docs-005-788"
   },
-  "/docs-654": {
+  "/docs-9b9": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/docs/assessments/-373": {
@@ -99,85 +99,133 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-learning-paths-software-developer-38-c-60a"
   },
-  "/docs/module-1/-3dd": {
+  "/docs/module-1/-8e0": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-1-512-6ba"
   },
-  "/docs/module-1/ch1-1-9ce": {
+  "/docs/module-1/ch1-1-8a2": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-1-ch-1-1-a-34-80a"
   },
-  "/docs/module-1/ch1-2-9d9": {
+  "/docs/module-1/ch1-2-8c6": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-1-ch-1-2-d-65-237"
   },
-  "/docs/module-1/ch1-3-b0d": {
+  "/docs/module-1/ch1-3-906": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-1-ch-1-3-ae-9-575"
   },
-  "/docs/module-1/ch1-4-a70": {
+  "/docs/module-1/ch1-4-641": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-1-ch-1-4430-069"
   },
-  "/docs/module-2/-ca2": {
+  "/docs/module-2/-e75": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-2-5-ad-bc6"
   },
-  "/docs/module-2/ch2-1-aa0": {
+  "/docs/module-2/ch2-1-5af": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-2-ch-2-18-c-1-9a7"
   },
-  "/docs/module-2/ch2-2-83f": {
+  "/docs/module-2/ch2-2-2da": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-2-ch-2-2-b-20-e6c"
   },
-  "/docs/module-2/ch2-3-ec2": {
+  "/docs/module-2/ch2-3-73b": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-2-ch-2-3-eef-590"
   },
-  "/docs/module-2/ch2-4-b4d": {
+  "/docs/module-2/ch2-4-1d0": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-2-ch-2-42-c-5-a91"
   },
-  "/docs/module-3/-72b": {
+  "/docs/module-3/-127": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-3-9-b-4-f4c"
   },
-  "/docs/module-3/ch3-1-166": {
+  "/docs/module-3/ch3-1-81e": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-3-ch-3-1879-f3f"
   },
-  "/docs/module-3/ch3-2-009": {
+  "/docs/module-3/ch3-2-450": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-3-ch-3-268-d-dd5"
   },
-  "/docs/module-3/ch3-3-9ac": {
+  "/docs/module-3/ch3-3-6cc": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-3-ch-3-3-e-86-020"
   },
-  "/docs/module-3/ch3-4-9ac": {
+  "/docs/module-3/ch3-4-858": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-3-ch-3-4585-300"
   },
-  "/docs/module-4/-c39": {
+  "/docs/module-4/-710": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-4-c-7-d-d1e"
   },
-  "/docs/module-4/ch4-1-8d8": {
+  "/docs/module-4/ch4-1-e70": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-4-ch-4-1-d-24-2e2"
   },
-  "/docs/module-4/ch4-2-025": {
+  "/docs/module-4/ch4-2-6bf": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-4-ch-4-2-a-42-e37"
   },
-  "/docs/module-4/ch4-3-0a0": {
+  "/docs/module-4/ch4-3-bc4": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-4-ch-4-39-c-8-5de"
   },
-  "/docs/module-4/ch4-4-daf": {
+  "/docs/module-4/ch4-4-f1d": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-module-4-ch-4-41-ab-5f4"
+  },
+  "/docs/part1-foundations/chapter-1-intro-955": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-part-1-foundations-chapter-1-introc-64-7ae"
+  },
+  "/docs/part1-foundations/chapter-2-ros2-b47": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-part-1-foundations-chapter-2-ros-2000-9d8"
+  },
+  "/docs/part2-simulation/chapter-3-urdf-828": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-part-2-simulation-chapter-3-urdf-3-f-7-9d6"
+  },
+  "/docs/part2-simulation/chapter-4-gazebo-644": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-part-2-simulation-chapter-4-gazebocc-6-37c"
+  },
+  "/docs/part2-simulation/chapter-5-isaac-dd2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-part-2-simulation-chapter-5-isaac-85-f-e9e"
+  },
+  "/docs/part3-perception/chapter-6-vision-4e7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-part-3-perception-chapter-6-visionb-72-2eb"
+  },
+  "/docs/part3-perception/chapter-7-slam-103": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-part-3-perception-chapter-7-slam-254-920"
+  },
+  "/docs/part4-ai-integration/chapter-8-vla-97b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-part-4-ai-integration-chapter-8-vlaa-4-e-90e"
+  },
+  "/docs/part4-ai-integration/chapter-9-rl-56a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-part-4-ai-integration-chapter-9-rl-39-f-83d"
+  },
+  "/docs/part5-humanoid-dev/chapter-10-kinematics-f17": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-part-5-humanoid-dev-chapter-10-kinematics-23-a-e3e"
+  },
+  "/docs/part5-humanoid-dev/chapter-11-hri-ecc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-part-5-humanoid-dev-chapter-11-hri-1-b-0-ee2"
+  },
+  "/docs/part5-humanoid-dev/chapter-12-capstone-08d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-part-5-humanoid-dev-chapter-12-capstone-19-f-43e"
   },
   "/docs/toc-6af": {
     "__comp": "__comp---theme-doc-item-178-a40",

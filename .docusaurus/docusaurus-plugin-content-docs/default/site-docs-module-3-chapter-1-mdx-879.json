@@ -18,14 +18,5 @@
     "sidebar_position": 1,
     "duration": 15,
     "difficulty": "advanced"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Module Overview",
-    "permalink": "/docs/module-3/"
-  },
-  "next": {
-    "title": "Chapter 2: AI Integration",
-    "permalink": "/docs/module-3/ch3-2"
   }
 }

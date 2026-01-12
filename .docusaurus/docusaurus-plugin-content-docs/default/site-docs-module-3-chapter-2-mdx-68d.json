@@ -18,14 +18,5 @@
     "sidebar_position": 2,
     "duration": 12,
     "difficulty": "advanced"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Chapter 1: Isaac Sim Introduction",
-    "permalink": "/docs/module-3/ch3-1"
-  },
-  "next": {
-    "title": "Chapter 3: Computer Vision",
-    "permalink": "/docs/module-3/ch3-3"
   }
 }

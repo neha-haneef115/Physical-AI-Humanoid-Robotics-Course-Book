@@ -18,14 +18,5 @@
     "sidebar_position": 2,
     "duration": 10,
     "difficulty": "advanced"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Chapter 1: Gazebo Fundamentals",
-    "permalink": "/docs/module-2/ch2-1"
-  },
-  "next": {
-    "title": "Chapter 3: Unity Robotics",
-    "permalink": "/docs/module-2/ch2-3"
   }
 }

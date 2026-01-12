@@ -18,14 +18,5 @@
     "sidebar_position": 1,
     "duration": 10,
     "difficulty": "beginner"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Module Overview",
-    "permalink": "/docs/module-1/"
-  },
-  "next": {
-    "title": "Chapter 2: Nodes and Topics",
-    "permalink": "/docs/module-1/ch1-2"
   }
 }

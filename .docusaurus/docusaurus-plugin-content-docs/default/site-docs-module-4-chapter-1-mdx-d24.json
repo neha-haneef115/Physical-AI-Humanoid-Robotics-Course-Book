@@ -18,14 +18,5 @@
     "sidebar_position": 1,
     "duration": 14,
     "difficulty": "advanced"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Module Overview",
-    "permalink": "/docs/module-4/"
-  },
-  "next": {
-    "title": "Chapter 2: Language Models",
-    "permalink": "/docs/module-4/ch4-2"
   }
 }

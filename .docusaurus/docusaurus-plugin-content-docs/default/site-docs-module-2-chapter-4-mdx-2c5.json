@@ -18,14 +18,5 @@
     "sidebar_position": 4,
     "duration": 11,
     "difficulty": "intermediate"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Chapter 3: Unity Robotics",
-    "permalink": "/docs/module-2/ch2-3"
-  },
-  "next": {
-    "title": "Module Overview",
-    "permalink": "/docs/module-3/"
   }
 }

@@ -221,8 +221,7 @@ const ChatBot = ({ apiUrl = 'http://localhost:8000' }) => {
           <RobotIcon size={24} />
         </div>
         <span className="chat-badge">AI Assistant</span>
-        <div className="pulse-ring"></div>
-        <div className="tooltip">Ask me anything about Physical AI!</div>
+                <div className="tooltip">Ask me anything about Physical AI!</div>
       </button>
 
       {/* Chat Window */}

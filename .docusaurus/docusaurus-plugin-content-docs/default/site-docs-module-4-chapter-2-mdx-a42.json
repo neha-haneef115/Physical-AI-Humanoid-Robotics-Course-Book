@@ -18,14 +18,5 @@
     "sidebar_position": 2,
     "duration": 13,
     "difficulty": "advanced"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Chapter 1: VLA Fundamentals",
-    "permalink": "/docs/module-4/ch4-1"
-  },
-  "next": {
-    "title": "Chapter 3: Vision Systems",
-    "permalink": "/docs/module-4/ch4-3"
   }
 }

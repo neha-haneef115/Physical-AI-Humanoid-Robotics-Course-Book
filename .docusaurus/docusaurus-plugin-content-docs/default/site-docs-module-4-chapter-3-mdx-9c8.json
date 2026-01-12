@@ -18,14 +18,5 @@
     "sidebar_position": 3,
     "duration": 13,
     "difficulty": "advanced"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Chapter 2: Language Models",
-    "permalink": "/docs/module-4/ch4-2"
-  },
-  "next": {
-    "title": "Chapter 4: Action Planning",
-    "permalink": "/docs/module-4/ch4-4"
   }
 }

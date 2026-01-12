@@ -18,10 +18,5 @@
     "sidebar_position": 4,
     "duration": 15,
     "difficulty": "advanced"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Chapter 3: Vision Systems",
-    "permalink": "/docs/module-4/ch4-3"
   }
 }

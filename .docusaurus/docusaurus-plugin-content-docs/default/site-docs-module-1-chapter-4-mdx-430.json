@@ -18,14 +18,5 @@
     "sidebar_position": 4,
     "duration": 8,
     "difficulty": "intermediate"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Chapter 3: Services and Actions",
-    "permalink": "/docs/module-1/ch1-3"
-  },
-  "next": {
-    "title": "Module Overview",
-    "permalink": "/docs/module-2/"
   }
 }

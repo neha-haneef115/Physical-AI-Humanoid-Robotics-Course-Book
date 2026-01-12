@@ -18,14 +18,5 @@
     "sidebar_position": 1,
     "duration": 12,
     "difficulty": "intermediate"
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Module Overview",
-    "permalink": "/docs/module-2/"
-  },
-  "next": {
-    "title": "Chapter 2: Physics and Sensors",
-    "permalink": "/docs/module-2/ch2-2"
   }
 }
