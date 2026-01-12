@@ -92,7 +92,7 @@ export default function Home() {
           
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", marginBottom: "4rem" }}>
             <Link 
-              to="/docs/book-structure" 
+              to="/docs/intro"
               className="button button--primary button--lg"
               style={{
                 background: "#00ff00",
